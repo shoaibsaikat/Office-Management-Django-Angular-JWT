@@ -39,12 +39,6 @@ Note:
 3. To generate requirements.txt file -> pip freeze > requirements.txt or conda list -e > requirements.txt and to create a new environment pip install -r requirements.txt or conda create --name <env_name> --file requirements.txt
 4. to update all packages -> conda update --all
 
-
-# Angular-Office-Management-FrontEnd
-Angular frontend for Django-Office-Management-BackEnd repository
-
-Issues:
-1. Fix inventory quickedit update error msg in javascript console
-2. Fix CORS issue in .NET
-3. Fix empty email in profile update and also email error check
-4. Need to check why response is sometimes parsed as msg.text and sometimes msg. i.e. inventory quick edit vs create.
+Frontend Project:
+1. https://github.com/shoaibsaikat/Angular-Office-Management
+Note: django_jwt branch need to be used.
