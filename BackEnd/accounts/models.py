@@ -54,7 +54,6 @@ class Profile(models.Model):
                 can_approve_inventory=self.canApproveInventory,
                 can_approve_leave=self.canApproveLeave,
                 can_manage_asset=self.canManageAsset,
-                can_manage_driver=self.canManageDriver,
                 type=self.type,
                 phone1=self.phone1,
                 phone2=self.phone2,
