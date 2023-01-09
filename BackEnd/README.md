@@ -33,6 +33,9 @@ To use Conda-Forge:
 3. conda config --add channels conda-forge
 4. conda config --set channel_priority strict
 
+Some commands:
+1. conda update --all
+
 Note:
 1. To generate spec list file -> conda list --explicit > <file_name>.txt
 2. To generate environment.yml file -> conda env export --name <environment_name> > <file_name>.yml
