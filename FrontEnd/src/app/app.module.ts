@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { GoogleChartsModule } from 'angular-google-charts'; 
@@ -35,48 +35,42 @@ import { SummaryComponent as LeaveSummaryComponent } from './components/leave/su
 import { CreateComponent as LeaveCreateComponent } from './components/leave/create/create.component';
 import { LoadingComponent } from './components/loading/loading.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    SigninComponent,
-    SignoutComponent,
-    HomeComponent,
-    ProfileComponent,
-    ManagerComponent,
-    PasswordComponent,
-    MessageComponent,
-    AssetMyListComponent,
-    AssetAllListComponent,
-    AssetPendingListComponent,
-    AssetCreateComponent,
-    AssetEditComponent,
-    InventoryListComponent,
-    InventoryCreateComponent,
-    InventoryEditComponent,
-    RequisitionCreateComponent,
-    RequisitionHistoryComponent,
-    RequisitionMyListComponent,
-    RequisitionDetailComponent,
-    RequisitionPendingApprovalComponent,
-    RequisitionPendingDistributionComponent,
-    LeaveMyListComponent,
-    LeaveDetailComponent,
-    LeaveRequestListComponent,
-    LeaveSummaryComponent,
-    LeaveCreateComponent,
-    LoadingComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    GoogleChartsModule
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        SigninComponent,
+        SignoutComponent,
+        HomeComponent,
+        ProfileComponent,
+        ManagerComponent,
+        PasswordComponent,
+        MessageComponent,
+        AssetMyListComponent,
+        AssetAllListComponent,
+        AssetPendingListComponent,
+        AssetCreateComponent,
+        AssetEditComponent,
+        InventoryListComponent,
+        InventoryCreateComponent,
+        InventoryEditComponent,
+        RequisitionCreateComponent,
+        RequisitionHistoryComponent,
+        RequisitionMyListComponent,
+        RequisitionDetailComponent,
+        RequisitionPendingApprovalComponent,
+        RequisitionPendingDistributionComponent,
+        LeaveMyListComponent,
+        LeaveDetailComponent,
+        LeaveRequestListComponent,
+        LeaveSummaryComponent,
+        LeaveCreateComponent,
+        LoadingComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        GoogleChartsModule], providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
