@@ -10,7 +10,7 @@
         <ul class="navbar-nav me-auto"></ul>
         <ul class="navbar-nav" style="margin-right: 1em;">
           <li class="nav-item" *ngIf="isValidUser()">
-            <div class="nav-link"><h5>@<em>{{getUser().first_name}} {{getUser().last_name}}</em></h5></div>
+            <div class="nav-link"><h5>&#64;<em>{{getUser().first_name}} {{getUser().last_name}}</em></h5></div>
           </li>
           <li class="nav-item" *ngIf="isValidUser()">
             <app-signout></app-signout>
