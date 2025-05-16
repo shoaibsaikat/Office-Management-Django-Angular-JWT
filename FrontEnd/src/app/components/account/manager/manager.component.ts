@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { AccountService } from '../../../services/account/account.service';
@@ -15,8 +15,8 @@ import { User } from 'src/app/shared/types/user';
 export class ManagerComponent implements OnInit {
 
   managerList: User[] = [];
-  managerForm = new FormGroup({
-    manager: new FormControl(),
+  managerForm = new UntypedFormGroup({
+    manager: new UntypedFormControl(),
   });
   currentManger: number = -1;
 

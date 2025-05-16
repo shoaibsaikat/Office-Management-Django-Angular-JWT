@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { InventoryService } from 'src/app/services/inventory/inventory.service';
@@ -19,7 +19,7 @@ import { Common } from 'src/app/shared/common';
 export class ListComponent implements OnInit {
 
   inventoryList: Inventory[] = [];
-  inventoryFormList: FormGroup[] = [];
+  inventoryFormList: UntypedFormGroup[] = [];
 
   // pagination, NOTE: pagination is by 10 in server side and can't be set from client
   listCount: number = 0;
@@ -49,8 +49,8 @@ export class ListComponent implements OnInit {
 
         // generate form groups
         this.inventoryList.forEach(element => {
-          this.inventoryFormList.push(new FormGroup({
-            count: new FormControl(),
+          this.inventoryFormList.push(new UntypedFormGroup({
+            count: new UntypedFormControl(),
           }));
         });
         // set inventory count to form

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { AssetService } from 'src/app/services/asset/asset.service';
@@ -20,7 +20,7 @@ export class MyListComponent implements OnInit {
 
   userList: User[] = [];
   assetList: Asset[] = [];
-  assignFormList: FormGroup[] = [];
+  assignFormList: UntypedFormGroup[] = [];
 
   // pagination, NOTE: pagination is by 10 in server side and can't be set from client
   listCount: number = 0;
@@ -57,8 +57,8 @@ export class MyListComponent implements OnInit {
 
         // generate form groups
         this.assetList.forEach(element => {
-          this.assignFormList.push(new FormGroup({
-            user: new FormControl(),
+          this.assignFormList.push(new UntypedFormGroup({
+            user: new UntypedFormControl(),
           }));
         });
         // console.log('MyListComponent: ngOnInit() ' + this.assignFormList.length);

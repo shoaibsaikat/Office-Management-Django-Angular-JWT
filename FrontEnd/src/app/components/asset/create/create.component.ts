@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { AssetService } from 'src/app/services/asset/asset.service';
@@ -12,15 +12,15 @@ import { AssetService } from 'src/app/services/asset/asset.service';
 })
 export class CreateComponent implements OnInit {
 
-  assetForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, ]),
-    model: new FormControl('', [Validators.required, ]),
-    serial: new FormControl('', [Validators.required, ]),
-    purchaseDate: new FormControl('', [Validators.required, ]),
-    warranty: new FormControl('', [Validators.required, ]),
-    type: new FormControl('', [Validators.required, ]),
-    status: new FormControl('', [Validators.required, ]),
-    description: new FormControl(),
+  assetForm: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl('', [Validators.required, ]),
+    model: new UntypedFormControl('', [Validators.required, ]),
+    serial: new UntypedFormControl('', [Validators.required, ]),
+    purchaseDate: new UntypedFormControl('', [Validators.required, ]),
+    warranty: new UntypedFormControl('', [Validators.required, ]),
+    type: new UntypedFormControl('', [Validators.required, ]),
+    status: new UntypedFormControl('', [Validators.required, ]),
+    description: new UntypedFormControl(),
   });
   get name() { return this.assetForm.get('name'); }
   get model() { return this.assetForm.get('model'); }

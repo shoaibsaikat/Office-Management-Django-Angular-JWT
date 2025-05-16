@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { RequisitionService } from 'src/app/services/requisition/requisition.service';
@@ -16,12 +16,12 @@ import { Inventory } from 'src/app/shared/types/inventory';
 })
 export class CreateComponent implements OnInit {
 
-  requisitionForm: FormGroup = new FormGroup({
-    title: new FormControl('', [Validators.required, ]),
-    inventory: new FormControl('', [Validators.required, ]),
-    approver: new FormControl('', [Validators.required, ]),
-    amount: new FormControl('', [Validators.required, ]),
-    comment: new FormControl(),
+  requisitionForm: UntypedFormGroup = new UntypedFormGroup({
+    title: new UntypedFormControl('', [Validators.required, ]),
+    inventory: new UntypedFormControl('', [Validators.required, ]),
+    approver: new UntypedFormControl('', [Validators.required, ]),
+    amount: new UntypedFormControl('', [Validators.required, ]),
+    comment: new UntypedFormControl(),
   });
   get title() { return this.requisitionForm.get('title'); }
   get inventory() { return this.requisitionForm.get('inventory'); }

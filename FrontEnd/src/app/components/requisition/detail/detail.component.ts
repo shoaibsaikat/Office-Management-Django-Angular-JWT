@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { ActivatedRoute } from '@angular/router';
 
@@ -18,8 +18,8 @@ import { Requisition } from 'src/app/shared/types/requisition';
 })
 export class DetailComponent implements OnInit {
 
-  approvalForm: FormGroup = new FormGroup({
-    distributor: new FormControl('', [Validators.required, ]),
+  approvalForm: UntypedFormGroup = new UntypedFormGroup({
+    distributor: new UntypedFormControl('', [Validators.required, ]),
   });
   get distributor() { return this.approvalForm.get('distributor'); }
 

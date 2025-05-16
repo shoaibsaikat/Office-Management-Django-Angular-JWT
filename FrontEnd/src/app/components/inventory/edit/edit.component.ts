@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { InventoryService } from 'src/app/services/inventory/inventory.service';
@@ -17,9 +17,9 @@ export class EditComponent implements OnInit {
   id: number = 0;
   unit: string = '';
   name: string = '';
-  inventoryForm: FormGroup = new FormGroup({
-    count: new FormControl('', [Validators.required, ]),
-    description: new FormControl(),
+  inventoryForm: UntypedFormGroup = new UntypedFormGroup({
+    count: new UntypedFormControl('', [Validators.required, ]),
+    description: new UntypedFormControl(),
   });
   get count() { return this.inventoryForm.get('count'); }
   get description() { return this.inventoryForm.get('description'); }

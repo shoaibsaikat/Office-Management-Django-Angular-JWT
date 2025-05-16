@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder, FormGroup, FormControl, FormArray, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms';
+import { Validators, FormBuilder, UntypedFormGroup, UntypedFormControl, FormArray, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { AccountService } from '../../../services/account/account.service';
@@ -11,10 +11,10 @@ import { AccountService } from '../../../services/account/account.service';
 })
 export class PasswordComponent implements OnInit {
 
-  passwordForm = new FormGroup({
-    oldPassword: new FormControl('', [Validators.required]),
-    newPassword1: new FormControl('', [Validators.required]),
-    newPassword2: new FormControl('', [Validators.required]),
+  passwordForm = new UntypedFormGroup({
+    oldPassword: new UntypedFormControl('', [Validators.required]),
+    newPassword1: new UntypedFormControl('', [Validators.required]),
+    newPassword2: new UntypedFormControl('', [Validators.required]),
   }, {
     validators: [this.passwordMatchValidation()],
   });

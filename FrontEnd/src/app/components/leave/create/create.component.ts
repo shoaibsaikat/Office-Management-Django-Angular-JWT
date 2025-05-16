@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { LeaveService } from 'src/app/services/leave/leave.service';
@@ -15,11 +15,11 @@ import { Message } from '../../../shared/types/message';
 })
 export class CreateComponent implements OnInit {
 
-  leaveForm: FormGroup = new FormGroup({
-    title: new FormControl('', [Validators.required, ]),
-    start: new FormControl('', [Validators.required, ]),
-    end: new FormControl('', [Validators.required, ]),
-    comment: new FormControl('', [Validators.required, ]),
+  leaveForm: UntypedFormGroup = new UntypedFormGroup({
+    title: new UntypedFormControl('', [Validators.required, ]),
+    start: new UntypedFormControl('', [Validators.required, ]),
+    end: new UntypedFormControl('', [Validators.required, ]),
+    comment: new UntypedFormControl('', [Validators.required, ]),
   });
   get title() { return this.leaveForm.get('title'); }
   get start() { return this.leaveForm.get('start'); }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { AccountService } from 'src/app/services/account/account.service';
@@ -14,10 +14,10 @@ import { User } from 'src/app/shared/types/user';
 
 export class ProfileComponent implements OnInit {
   user: User = this.globalService.getUser();
-  profileForm: FormGroup = new FormGroup({
-    firstName: new FormControl('', [Validators.required, ]),
-    lastName: new FormControl('', [Validators.required, ]),
-    email: new FormControl('', [Validators.email, ]),
+  profileForm: UntypedFormGroup = new UntypedFormGroup({
+    firstName: new UntypedFormControl('', [Validators.required, ]),
+    lastName: new UntypedFormControl('', [Validators.required, ]),
+    email: new UntypedFormControl('', [Validators.email, ]),
   });
   // get is not mandatory, it's for less code, if get is not added in that case from html we can get FormControl by using, profileForm.get('')
   get firstName() { return this.profileForm.get('firstName'); }

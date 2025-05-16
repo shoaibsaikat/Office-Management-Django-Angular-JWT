@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { GlobalService } from 'src/app/services/global/global.service';
 import { InventoryService } from 'src/app/services/inventory/inventory.service';
@@ -16,11 +16,11 @@ import { Inventory } from 'src/app/shared/types/inventory';
 })
 export class CreateComponent implements OnInit {
 
-  inventoryForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, ]),
-    unit: new FormControl('', [Validators.required, ]),
-    count: new FormControl('', [Validators.required, ]),
-    description: new FormControl(),
+  inventoryForm: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl('', [Validators.required, ]),
+    unit: new UntypedFormControl('', [Validators.required, ]),
+    count: new UntypedFormControl('', [Validators.required, ]),
+    description: new UntypedFormControl(),
   });
   get name() { return this.inventoryForm.get('name'); }
   get unit() { return this.inventoryForm.get('unit'); }
