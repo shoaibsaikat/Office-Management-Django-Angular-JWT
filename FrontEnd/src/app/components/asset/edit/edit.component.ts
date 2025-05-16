@@ -9,9 +9,10 @@ import { AssetService } from 'src/app/services/asset/asset.service';
 import { Asset } from 'src/app/shared/types/asset';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+    selector: 'app-edit',
+    templateUrl: './edit.component.html',
+    styleUrls: ['./edit.component.css'],
+    standalone: false
 })
 export class EditComponent implements OnInit {
 

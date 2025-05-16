@@ -9,9 +9,10 @@ import { User } from 'src/app/shared/types/user';
 import { Message } from 'src/app/shared/types/message';
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+    selector: 'app-detail',
+    templateUrl: './detail.component.html',
+    styleUrls: ['./detail.component.css'],
+    standalone: false
 })
 export class DetailComponent implements OnInit {
 

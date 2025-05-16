@@ -7,9 +7,10 @@ import { AccountService } from '../../../services/account/account.service';
 import { User } from 'src/app/shared/types/user';
 
 @Component({
-  selector: 'app-manager',
-  templateUrl: './manager.component.html',
-  styleUrls: ['./manager.component.css']
+    selector: 'app-manager',
+    templateUrl: './manager.component.html',
+    styleUrls: ['./manager.component.css'],
+    standalone: false
 })
 
 export class ManagerComponent implements OnInit {

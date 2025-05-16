@@ -9,9 +9,10 @@ import { MessageService } from 'src/app/services/message/message.service';
 import { Inventory } from 'src/app/shared/types/inventory';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
+    standalone: false
 })
 export class HomeComponent implements OnInit {
 

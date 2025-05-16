@@ -8,9 +8,10 @@ import { InventoryService } from 'src/app/services/inventory/inventory.service';
 import { Inventory } from 'src/app/shared/types/inventory';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+    selector: 'app-edit',
+    templateUrl: './edit.component.html',
+    styleUrls: ['./edit.component.css'],
+    standalone: false
 })
 export class EditComponent implements OnInit {
 

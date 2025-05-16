@@ -8,9 +8,10 @@ import { Common } from 'src/app/shared/common';
 import { Requisition } from 'src/app/shared/types/requisition';
 
 @Component({
-  selector: 'app-pending-distribution',
-  templateUrl: './pending-distribution.component.html',
-  styleUrls: ['./pending-distribution.component.css']
+    selector: 'app-pending-distribution',
+    templateUrl: './pending-distribution.component.html',
+    styleUrls: ['./pending-distribution.component.css'],
+    standalone: false
 })
 export class PendingDistributionComponent implements OnInit {
 

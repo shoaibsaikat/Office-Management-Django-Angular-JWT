@@ -5,9 +5,10 @@ import { AccountService } from '../../../services/account/account.service';
 import { MessageService } from 'src/app/services/message/message.service';
 
 @Component({
-  selector: 'app-signout',
-  templateUrl: './signout.component.html',
-  styleUrls: ['./signout.component.css']
+    selector: 'app-signout',
+    templateUrl: './signout.component.html',
+    styleUrls: ['./signout.component.css'],
+    standalone: false
 })
 export class SignoutComponent implements OnInit {
 

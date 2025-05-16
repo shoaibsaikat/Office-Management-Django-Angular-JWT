@@ -9,9 +9,10 @@ import { Message } from 'src/app/shared/types/message';
 import { Common } from 'src/app/shared/common';
 
 @Component({
-  selector: 'app-request-list',
-  templateUrl: './request-list.component.html',
-  styleUrls: ['./request-list.component.css']
+    selector: 'app-request-list',
+    templateUrl: './request-list.component.html',
+    styleUrls: ['./request-list.component.css'],
+    standalone: false
 })
 export class RequestListComponent implements OnInit {
 

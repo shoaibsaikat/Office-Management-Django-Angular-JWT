@@ -10,9 +10,10 @@ import { User } from 'src/app/shared/types/user';
 import { Common } from 'src/app/shared/common';
 
 @Component({
-  selector: 'app-pending-approval',
-  templateUrl: './pending-approval.component.html',
-  styleUrls: ['./pending-approval.component.css']
+    selector: 'app-pending-approval',
+    templateUrl: './pending-approval.component.html',
+    styleUrls: ['./pending-approval.component.css'],
+    standalone: false
 })
 export class PendingApprovalComponent implements OnInit {
 

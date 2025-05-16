@@ -8,9 +8,10 @@ import { AssetViewModel } from 'src/app/shared/types/asset-view-model';
 import { Common } from 'src/app/shared/common';
 
 @Component({
-  selector: 'app-all-list',
-  templateUrl: './all-list.component.html',
-  styleUrls: ['./all-list.component.css']
+    selector: 'app-all-list',
+    templateUrl: './all-list.component.html',
+    styleUrls: ['./all-list.component.css'],
+    standalone: false
 })
 export class AllListComponent implements OnInit {
 

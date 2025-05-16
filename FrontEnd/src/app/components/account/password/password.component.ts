@@ -5,9 +5,10 @@ import { GlobalService } from 'src/app/services/global/global.service';
 import { AccountService } from '../../../services/account/account.service';
 
 @Component({
-  selector: 'app-password',
-  templateUrl: './password.component.html',
-  styleUrls: ['./password.component.css']
+    selector: 'app-password',
+    templateUrl: './password.component.html',
+    styleUrls: ['./password.component.css'],
+    standalone: false
 })
 export class PasswordComponent implements OnInit {
 

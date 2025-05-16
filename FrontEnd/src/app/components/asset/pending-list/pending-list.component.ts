@@ -8,9 +8,10 @@ import { Message } from 'src/app/shared/types/message';
 import { Common } from 'src/app/shared/common';
 
 @Component({
-  selector: 'app-pending-list',
-  templateUrl: './pending-list.component.html',
-  styleUrls: ['./pending-list.component.css']
+    selector: 'app-pending-list',
+    templateUrl: './pending-list.component.html',
+    styleUrls: ['./pending-list.component.css'],
+    standalone: false
 })
 export class PendingListComponent implements OnInit {
 

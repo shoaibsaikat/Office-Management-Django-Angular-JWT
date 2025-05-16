@@ -9,9 +9,10 @@ import { MessageService } from 'src/app/services/message/message.service';
 import { Message } from '../../../shared/types/message';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+    selector: 'app-create',
+    templateUrl: './create.component.html',
+    styleUrls: ['./create.component.css'],
+    standalone: false
 })
 export class CreateComponent implements OnInit {
 

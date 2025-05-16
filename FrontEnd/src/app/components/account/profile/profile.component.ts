@@ -7,9 +7,10 @@ import { AccountService } from 'src/app/services/account/account.service';
 import { User } from 'src/app/shared/types/user';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+    selector: 'app-profile',
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.css'],
+    standalone: false
 })
 
 export class ProfileComponent implements OnInit {

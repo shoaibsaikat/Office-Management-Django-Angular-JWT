@@ -12,9 +12,10 @@ import { Asset } from 'src/app/shared/types/asset';
 import { Common } from 'src/app/shared/common';
 
 @Component({
-  selector: 'app-my-list',
-  templateUrl: './my-list.component.html',
-  styleUrls: ['./my-list.component.css']
+    selector: 'app-my-list',
+    templateUrl: './my-list.component.html',
+    styleUrls: ['./my-list.component.css'],
+    standalone: false
 })
 export class MyListComponent implements OnInit {
 

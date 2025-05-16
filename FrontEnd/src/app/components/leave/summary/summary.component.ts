@@ -9,9 +9,10 @@ import { Common } from 'src/app/shared/common';
 import { LeaveSummary } from 'src/app/shared/types/leave_summary';
 
 @Component({
-  selector: 'app-summary',
-  templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.css']
+    selector: 'app-summary',
+    templateUrl: './summary.component.html',
+    styleUrls: ['./summary.component.css'],
+    standalone: false
 })
 export class SummaryComponent implements OnInit {
 
